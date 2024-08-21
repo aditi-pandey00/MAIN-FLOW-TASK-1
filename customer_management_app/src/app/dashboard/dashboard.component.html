@@ -1,0 +1,80 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <h2>PrioRiTy TaSk </h2>
+      <div class="d-flex">
+        <button routerLink="/create" class="btn btn-danger mx-3">Add-User</button>
+        <button (click)="logOut()" class="btn btn-danger mx-3">Log-Out</button>
+      </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <table  class="table table-primary mt-5">
+        <thead>
+            <tr>
+                <th scope="col">userId</th>
+                <th scope="col">userName</th>
+                <th scope="col">address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Task</th> 
+                <th scope="col">---------------</th>
+                <th scope="col">----------</th> 
+
+            </tr>
+        </thead>
+        <tbody>
+             <tr *ngFor="let x of customersRecord"> 
+         
+                <td class="table-warning">{{x.userId}}</td>
+                <td class="table-warning">{{x.userName}}</td>
+                <td class="table-warning">{{x.address}}</td>
+                <td class="table-warning">{{x.email}}</td>
+                <td class="table-warning">{{x.phone}}</td>
+                <td class="table-warning">{{x.task}}</td>
+                <td class="table-warning"><button class="btn btn-info" (click)="update(x.userId)" >ADD-Task</button></td>
+                <td class="table-warning"><button class="btn btn-info" (click)="deleteUser(x.userId)" >Delete</button></td>
+            </tr>
+        </tbody>
+     </table>
+ </div>
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- <form  [formGroup]="myReactiveForm" (ngSubmit)="logIn()">
+  
+                  <div class="mb-3">
+                    <label for="email">User Name</label>
+                    <input type="text" class="form-control" id="email" autocomplete="off" formControlName="email" placeholder="enter admin email">
+                  </div>
+  
+                  <div class="mb-3">
+                    <label for="password">User Name</label>
+                    <input type="password" class="form-control" id="password" formControlName="password" placeholder="enter admin password">
+                  </div>
+               
+                  <button type="submit" class="btn btn-primary">login</button>
+  
+                </form> -->

@@ -1,0 +1,57 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h2> TaSk TraCk</h2>
+    <!-- <div class="d-flex">
+        <button routerLink="/header" class="btn btn-danger mx-3">Go Back To Main Page</button>
+      </div> -->
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>LOGIN</h1>
+          <h5>
+            put details to login </h5>
+          <hr>
+        </div>
+        <form (ngSubmit)="logIn(feedbackForm)" #feedbackForm="ngForm">
+
+          <div class="mb-3">
+            <label for="email">User Name</label>
+            <!-- <input class="form-control" type="text" name="email" #email="ngModel" placeholder="Enter User Email"
+                [(ngModel)]="feedback.email" pattern="[a-z0-9.]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>  -->
+            <input class="form-control" type="text" name="login_id" #login_id="ngModel" placeholder="Enter User Email"
+              [(ngModel)]="feedback.login_id" required>
+            <div *ngIf="login_id?.invalid && (login_id?.dirty || login_id?.touched)">
+              <div class="changewarningcolor" *ngIf="login_id?.errors?.['required']">
+                E-mail is required*
+              </div>
+              <!-- <div class="changewarningcolor" *ngIf="email?.errors?.['pattern']">
+                  Invalid Email pattern !
+                </div> -->
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="password">User Password</label>
+            <input class="form-control" type="password" matInput name="password" #password="ngModel"
+              placeholder="Enter Your Password" [(ngModel)]="feedback.password" required minlength="5">
+            <div class="changewarningcolor" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+              <div class="changewarningcolor" *ngIf="password?.errors?.['required']">
+                password is required*
+              </div>
+              <div class="changewarningcolor" *ngIf="password?.errors?.['minlength']">
+                please enter valid password leghth
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit" [disabled]="feedbackForm.invalid" id="Button">Submit</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

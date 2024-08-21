@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>ADD NEW USER</h1>
+                    <h5>Welcome</h5>
+                </div>
+                <hr>
+                <form  >
+
+                  
+                    <div class="mb-3">
+                        <label class="form-label">UserId</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="first_name" [(ngModel)]="customer.userId" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">userName</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="last_name" [(ngModel)]="customer.userName" >
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="street" [(ngModel)]="customer.address" >
+                      
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="address" [(ngModel)]="customer.email" >
+                      
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="city" [(ngModel)]="customer.phone" >
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label class="form-label">Task</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="state" [(ngModel)]="customer.task" >
+                    </div> -->
+                    <!-- <div class="mb-3">
+                        <label class="form-label">email</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="email" [(ngModel)]="customer.email" >
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">phone</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="phone" [(ngModel)]="customer.phone" >
+                    </div> -->
+                    
+
+                    <button type="submit" (click)="function1()" class="btn btn-success">ADD</button>
+
+                </form>
+                <a routerLink="/home">No Need to add go back!!</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
